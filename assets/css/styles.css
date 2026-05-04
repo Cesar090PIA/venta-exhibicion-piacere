@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@300;400;500&display=swap');
 
 * {
     margin: 0;
@@ -12,6 +11,7 @@ body {
     background-color: #F9F9F9;
 }
 
+/* HEADER */
 header {
     display: flex;
     justify-content: center;
@@ -25,13 +25,14 @@ nav {
     width: 80%;
     height: 100px;
     padding: 25px;
-    border-bottom: solid 1px black;
+    border-bottom: 1px solid black;
 }
 
 nav img {
     width: 220px;
 }
 
+/* CONTENIDO */
 article {
     display: flex;
     flex-direction: column;
@@ -39,6 +40,7 @@ article {
     width: 100%;
 }
 
+/* TITULO */
 .titulo {
     display: flex;
     flex-direction: column;
@@ -53,10 +55,10 @@ article {
     line-height: 1.15;
 }
 
+/* CATÁLOGO */
 .catalogos {
     display: flex;
     justify-content: center;
-    align-items: center;
     width: 100%;
     padding: 35px 20px 80px;
 }
@@ -71,8 +73,6 @@ article {
 .catalogo-enlace img {
     width: 520px;
     max-width: 90vw;
-    height: auto;
-    cursor: pointer;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
@@ -81,26 +81,28 @@ article {
     box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
 }
 
-.catalogo-enlace h3 {
+/* BOTÓN */
+.btn-catalogo {
     margin-top: 24px;
     padding: 14px 34px;
     border: 1px solid #111;
-    background-color: #111;
-    color: white;
-    font-size: 18px;
-    font-family: "Inter Tight", sans-serif;
+    background-color: transparent;
+    color: #111;
+    font-size: 15px;
     font-weight: 500;
     letter-spacing: 1px;
-    text-decoration: none;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: background-color 0.25s ease, transform 0.25s ease;
+    transition: all 0.25s ease;
 }
 
-.catalogo-enlace h3:hover {
-    background-color: #333;
+.btn-catalogo:hover {
+    background-color: #111;
+    color: white;
     transform: translateY(-2px);
 }
 
+/* FOOTER */
 footer {
     display: flex;
     justify-content: center;
@@ -112,11 +114,11 @@ footer {
 
 footer a {
     color: white;
-    font-weight: 100;
     font-size: 12px;
     text-decoration: none;
 }
 
+/* WHATSAPP */
 .whatsapp-btn {
     position: fixed;
     bottom: 28px;
@@ -133,15 +135,17 @@ footer a {
     transform: scale(1.1);
 }
 
+/* RESPONSIVE */
 @media (max-width: 600px) {
+
     nav {
         width: 92%;
-        height: 120px;
+        height: 110px;
         padding: 18px;
     }
 
     nav img {
-        width: 250px;
+        width: 240px;
         max-width: 90%;
     }
 
@@ -150,22 +154,16 @@ footer a {
     }
 
     .titulo h3 {
-        font-size: 42px;
-    }
-
-    .catalogos {
-        padding: 35px 16px 90px;
+        font-size: 40px;
     }
 
     .catalogo-enlace img {
         width: 92vw;
-        max-width: 92vw;
     }
 
-    .catalogo-enlace h3 {
-        font-size: 18px;
-        padding: 13px 30px;
-        margin-top: 24px;
+    .btn-catalogo {
+        font-size: 14px;
+        padding: 12px 28px;
     }
 
     .whatsapp-btn {
@@ -176,16 +174,4 @@ footer a {
     .whatsapp-btn img {
         width: 56px;
     }
-
-    .catalogo-enlace h3 {
-    border: 1px solid #111;
-    background-color: transparent;
-    color: #111;
-}
-
-.catalogo-enlace h3:hover {
-    background-color: #111;
-    color: white;
-}
-
 }
